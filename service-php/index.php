@@ -5,26 +5,6 @@ header("Content-Type: application/json; charset=utf-8");
 $response = [];
 
 
-$lakes =
-[
-    [
-        "id" =>1,
-        "title" => "A tó neve"
-    ],
-    [
-        "id" =>2,
-        "title" => "A tó helye"
-    ],
-    [
-        "id" =>3,
-        "title" => "A tó fajtája"
-    ],
-    [
-        "id" =>4,
-        "title" => "A tó rövid leírása"
-    ]
-];
-
 $dsn = 'mysql:host=localhost;dbname=fish_tips;charset=utf8mb4';
 $pdo = new PDO($dsn, "root", "mysql");
 

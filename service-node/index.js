@@ -19,7 +19,7 @@ app.post("/add-lakes", postParser, function(request, response)
         response.send();
     });
 });
-app.get( function(request, response)
+app.get( "get-lakes-in-table/:table",function(request, response)
 {
     response.writeHead(200, {"Content-Type": "application/json", "Access-Control-Allow-Origin": "*"});
         
