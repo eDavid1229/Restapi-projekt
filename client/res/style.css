@@ -64,32 +64,7 @@ body
 
 /*Header-menu*/
 
-header nav
-    {
-        background: radial-gradient(#e4da81,#3b2424);
-    }
-        header nav ul
-        {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
-            header nav ul li
-            {
-                display: inline-block;
-                width: 19%;
-            }
-                header nav ul li a
-                {
-                    display: inline-block;
-                    text-decoration: none;
-                    padding: 15px 0;
-                    width: 100%;
-                    transition: background 0.3s, color 0.3s;
-                    text-transform: uppercase;
-                    color: #0c0c0c;
-                }
+
 
 /*main*/
 
@@ -220,6 +195,18 @@ header nav
 					text-decoration: underline
 				}
 				
+
+section table
+{
+    border: 4px double black;
+text-align: center;
+}
+th,
+td
+{
+  border: 1px solid lightgray;
+  padding: 5px;
+}
 /*footer*/
 
 footer

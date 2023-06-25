@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <title>Fish&Tips</title>
@@ -13,17 +13,10 @@
         <div class="headerImage" style="background-image:url(media/Logó5.jpg)">
             <div class="info">
             <section>
-                <h3>Minden amit a horgászatr tudni kell</h3>
+                <h3>Minden amit a horgászatról tudni kell</h3>
             </section>
             </div>
         </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Bemutatkozás</a></li>
-                <li><a href="tókereső.html">Tókereső</a></li>
-                <li><a href="tippek.html">Tippek</a></li>
-            </ul>
-        </nav>
         </header>
 
         <div id="page">
@@ -44,8 +37,56 @@
 						
 						<h2>Phasellus hendrerit malesuada pulvinar</h2>
 						<p>Phasellus hendrerit malesuada pulvinar. Nulla imperdiet et orci in vehicula. Sed tincidunt imperdiet augue a pellentesque. Aliquam dignissim dignissim scelerisque. Sed at ante ut nulla feugiat pellentesque nec eget turpis. Sed tempor ex a dignissim semper. Praesent ullamcorper finibus arcu, quis scelerisque augue pulvinar id. Nulla vitae ante vitae massa vestibulum consequat ac eu risus. Pellentesque id fringilla tellus. Donec quis velit sapien. Quisque interdum quis magna vitae dictum. Nunc purus ligula, elementum dapibus vestibulum at, lacinia in est. Duis fringilla sapien massa, in consectetur purus condimentum at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce dui massa, dictum non nisl eget, facilisis convallis nisi. Etiam ac leo malesuada, luctus nisl vitae, sollicitudin risus.</p>
+                        
 						
 					</article>
+                    <h1 class="lakeserach">Tó kereső, Keresd meg a kedvenc tavadat. Ha nincs akkor add hozzá.</h1>
+
+                    <table class="leaks">
+                        <tbody>
+                            <tr>
+                                <th>Tó neve</th>
+                                <th>Tó helye</th>
+                                <th>Tó fajtája</th>
+                               <th>Tó rövid leírása</th>
+                            </tr>
+                            <tr>
+                                <td>Don carp lake</td>
+                                <td>Tiszakécske</td>
+                                <td>Bojli</td>
+                                <td>Ez egy közkedvelt tó, mert hatalmas kapitális halak lakják.</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                    <div class="input">
+                        <hr>
+                        <form action="" method="post">
+                            <div> 
+                                <label for="name">Tó neve</label><br>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div> 
+                                <label for="location">Tó helye</label><br>
+                                <input type="text" id="location" name="location">
+                            </div>
+                            <div>
+                                <label for="comment">Tó rövid leírása</label><br>
+                                <textarea name="comment" id="comment"></textarea>
+                            </div>
+                            <div>
+                                <label for="type">Tó fajtája</label><br>
+                                <select type="select" id="type">
+                                    <option value="1">Bojli</option>
+                                    <option value="1">Feeder</option>
+                                    <option value="1">Hagyományos</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="topic" id="topic">
+                            <button name="send">Beküldés</button>
+                        </form>
+                        <img src="media/vizrajz.jpg" alt="viziterkep">
+                    </div>
                 </main>
 				<aside>
 				
@@ -65,6 +106,7 @@
             </aside>
         </div>
     </div>
+    
     <footer>
         <div class="centerBox">
             <div class="left">
@@ -76,11 +118,14 @@
                 <h4>Oldaltérkép</h4>
                 <ul>
                     <li><a href="index.html">Bemutatkozás</a></li>
-                    <li><a href="articles.html">Cikkek</a></li>
-                    <li><a href="contact.html">Kapcsolat</a></li>
+                    <li><a href="">Cikkek</a></li>
+                    <li><a href="">Kapcsolat</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+
+    <script src="src/functions.js"></script>
+    <script src="src/script.js"></script>
 </body>
 </html>
