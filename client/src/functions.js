@@ -1,49 +1,25 @@
-function onNewSubmit(method)
+function showLakes(lakes)
 {
-    document.querySelector("form button").onclick = function(evt)
+    var html= '';
+    for(var l of lakes)
     {
-        evt.preventDefault();
-
-        var name = document.getElementById("name").value;
-        var location = document.getElementById("location").value;
-        var comment = document.getElementById("comment").value;
-        var type = document.getElementById("type").value;
-
-
-        var data = `name=${name}&location=${location}&comment=${comment}&type=${type}`;
-        
-        document.getElementById("name").value = "";
-        document.getElementById("location").value = "";
-        document.getElementById("comment").value = "";
-        document.getElementById("type").value = "";
-       
-
-        method(data);
-    };
-}
-function ajax(node, method, data, onReady)
-{
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function()
-    {
-        if(this.readyState == 4 && this.status == 200)
-        {
-            var topics = JSON.parse(this.responseText);
-            onReady(topics);
-        }
-    };
-    
-    if(method == "POST")
-    {
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    html += `<table>
+                <tbody>
+                    <tr>
+                        <th>Tó neve</th>
+                        <th>Tó helye</th>
+                        <th>Tó fajtája</th>
+                        <th>Tó rövid leírása</th>
+                    </tr>
+                    <tr>
+                        <td>${l.name}</td>
+                        <td>${l.location}</td>
+                        <td>${l.type}</td>
+                        <td>${l.comment}</td>
+                    </tr>
+                </tbody>
+            </table>`;
     }
- 
-}
-function getLakes(onReady)
-{
-    ajax("get-lakes", "GET", null, onReady);
-}
-function addLakes(data, onReady)
-{
-    ajax("add-lakes", "POST", data, onReady);
+    document.querySelector("table.lakes").innerHTML = html;
+   
 }
